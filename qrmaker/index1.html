@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QR code generator</title>
+
+<script>
+
+function qr()
+{
+
+    var a= text.value;
+    var b= " https://api.qrserver.com/v1/create-qr-code/?data="+a;
+qrimg.src = b;
+
+}
+</script>
+
+<style>
+body{
+    position: sticky;
+      background-color:rgb(156, 255, 255);;
+      
+      align-items: center;
+      
+  }
+  
+    *{
+        background-color:rgb(156, 255, 255);
+        align-items: center;
+        text-align:  center;
+        font-style: bold;
+
+    }
+
+    h2{
+        font-style: italic;
+        color: rgb(58, 53, 46);
+    }
+    .button{
+        background-color: aquamarine;
+        border: 1px solid black;
+    
+    }
+    .button:hover{
+        background-color: rgb(51, 224, 167);
+    }
+    #text{
+        background-color: aliceblue;
+        border: 0.5px solid black;
+    }
+    p{
+        text-align: bottom;
+        align-items: bottom;
+          margin-top: 100%;
+        margin-left: 100%;
+       
+    }
+    #qrimg{
+        height: 210px;
+        width: 210px;
+    }
+</style>
+
+
+
+
+</head>
+<body>
+    
+    
+<h2>Generate QR code by Text !</h1>
+  Enter any text:-
+
+<input id="text" placeholder="Enter Text" /></br><br>
+
+<button id="button" class="button" onclick="qr()">Generate QR</button>
+<hr/>  
+<img id="qrimg"  />
+
+
+</body>
+</html>

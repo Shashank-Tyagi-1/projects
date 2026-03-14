@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>qr code generator</title>
+
+<script>
+
+function qr()
+{
+
+    var a= text.value;
+    var b= " https://api.qrserver.com/v1/create-qr-code/pay?pa="+a;
+qrimg.src = b;
+
+}
+</script>
+
+
+<style>
+body{
+    position: sticky;
+      background-color:rgb(150, 255, 255);;
+      align-items: center;
+      
+  }
+  
+    *{
+        background-color:rgb(156, 255, 255);;
+        text-align:  center;
+        align-items: center;
+        font-style: bold;
+
+    }
+
+    h2{
+        font-style: italic;
+        color: rgb(58, 53, 46);
+    }
+    .button{
+        background-color: aquamarine;
+        border: 1px solid black;
+    
+    }
+    .button:hover{
+        background-color: rgb(51, 224, 167);
+    }
+    #text{
+        background-color: aliceblue;
+        border: 0.5px solid black;
+        position: sticky;
+    }
+    p{
+        text-align: bottom;
+        align-items: bottom;
+      margin-bottom: 0%;
+      position: sticky;
+      font-size: xx-small;
+    }
+    #qrimg{
+        height: 210px;
+        width: 210px;
+    }
+</style>
+
+
+
+</head>
+<body>
+    
+<h2>Generate QR code by UPI ID!</h1>
+  Enter any UPI ID :-
+
+<input id="text" placeholder="Enter Here" /></br><br>
+
+<button id="button" class="button" onclick="qr()">Generate QR</button>
+<hr/>  
+<img id="qrimg" />
+<br><br><br><br><br><br>
+
+
+
+</body>
+</html>
